@@ -1,0 +1,599 @@
+{
+	name:    "slovak",
+	version: "17",
+	title:   "Slovenčina",
+	code:    "svk",
+	windows: {
+		exception: {
+			button: {
+				report: "Nahlásit"
+			}
+		},
+		main: {
+			title: "Media Downloader",
+			buttons: {
+				download:          "Stiahnuť všetko",
+				download_selected: "Stiahnuť vybrané",
+				add:               "Pridať",
+				search:            "Hľadať"
+			},
+			tables: {
+				main: {
+					placeholder: "Žiadne sťahovanie neprebieha",
+					columns: {
+						title:       "Názov",
+						progress:    "Priebeh",
+						state:       "Stav",
+						current:     "Aktuálne",
+						total:       "Celkom",
+						speed:       "Rýchlosť",
+						time_left:   "Zostávajúci čas",
+						destination: "Výstupný súbor",
+						information: "Informácie"
+					}
+				}
+			},
+			context_menus: {
+				table: {
+					items: {
+						add:                "Pridať",
+						start:              "Spustiť",
+						terminate_cancel:   "Prerušiť",
+						terminate_combined: "Prerušiť/Odobrať",
+						terminate_remove:   "Odobrať",
+						retry:              "Opakovať",
+						show_file:          "Zobraziť súbor",
+						pause:              "Pozastaviť",
+						resume:             "Pokračovať",
+						copy_url:           "Skopírovať URL",
+						copy_source_url:    "Skopírovať zdrojovú URL",
+						media_info:         "Informácie o médiu",
+						report_broken:      "Nahlásiť nefunkčný mediálny zdroj",
+						move_up:            "Posunúť hore",
+						move_down:          "Posunúť dole",
+						move_begin:         "Posunúť na začiatok",
+						move_end:           "Posunúť na koniec"
+					}
+				},
+				add: {
+					items: {
+						media_getter: "URL"
+					}
+				}
+			},
+			menu_bar: {
+				application: {
+					title: "Program",
+					item: {
+						configuration: "Nastavenia",
+						credentials:   "Prihlasovacie údaje",
+						plugins:       "Správca pluginov"
+					}
+				},
+				tools: {
+					title: "Nástroje",
+					item: {
+						clipboard_watcher: "Sledovanie schránky"
+					}
+				},
+				help: {
+					title: "Pomocník",
+					item: {
+						report_issue:  "Nahlásiť problém",
+						feedback:      "Spätná väzba",
+						documentation: "Dokumentácia",
+						messages:      "Správy",
+						about:         "O programe",
+						resolve_issues: {
+							title: "Riešenie problémov",
+							item: {
+								update_resources: "Aktualizovať prostriedky"
+							}
+						}
+					}
+				}
+			},
+			progress: {
+				cancel:         "Rušenie...",
+				initialization: "Inicializácia sťahovania...",
+				plain:          "%{text} %{percent}%%",
+				waiting:        "Čakanie...",
+				error:          "Chyba: %{text}",
+				completed:      "Hotovo",
+				stopped:        "Zrušené"
+			},
+			states: {
+				wait:           "Čakanie",
+				initialization: "Inicializácia",
+				download:       "Sťahovanie",
+				conversion:     "Konverzia",
+				merge:          "Zlúčenie",
+				stopped:        "Zrušené",
+				done:           "Hotovo",
+				error:          "Chyba",
+				paused:         "Pozastavené",
+				retry:          "Opakovanie",
+				queued:         "Vo fronte: %{context}s (%{position}d)",
+				media_fix:      "Oprava média",
+				media_fix_step: {
+					video: {
+						fix_timestamps: "Video: Oprava časových značiek"
+					},
+					audio: {
+						fix_timestamps: "Audio: Oprava časových značiek"
+					}
+				},
+				synthetic: {
+					pausing:  "Pozastavovanie",
+					resuming: "Pokračovanie",
+					stopping: "Zastavovanie",
+					retrying: "Opakovanie"
+				}
+			},
+			dialogs: {
+				messages_empty: {
+					title: "Žiadne správy či novinky",
+					text:  "Momentálne nie sú k dispozícii žiadne správy či novinky."
+				},
+				update_resources: {
+					title: "Aktualizovať prostriedky",
+					text:  "Ste si istí, že chcete aktualizovať všetky prostriedky?",
+					success: {
+						title: "Aktualizovať prostriedky",
+						text:  "Prostriedky boli aktualizované. Prosím, reštartujte program."
+					}
+				},
+				close_request: {
+					active_processes: {
+						title: "Ukončiť program",
+						text:  "Stále sú aktívne niektoré procesy. Ste si istí, že chcete ukončiť program?"
+					}
+				}
+			},
+			actions: {
+				messages: {
+					checking: "Kontrolovanie nových správ..."
+				}
+			}
+		},
+		plugin_manager: {
+			title: "Správca pluginov",
+			table: {
+				column: {
+					title:   "Názov",
+					version: "Verzia",
+					author:  "Autor",
+					url:     "URL"
+				}
+			},
+			button: {
+				update_all: "Aktualizovať"
+			},
+			progress: {
+				update: {
+					title:     "Aktualizácia pluginov",
+					init:      "Aktualizácia pluginov...",
+					done:      "Aktualizácia pluginov... hotovo",
+					item_init: "Aktualizácia %{name}...",
+					item_done: "Aktualizácia %{name}... hotovo",
+					done_any:  "Pluginy boli aktualizované. Pre vykonanie zmien reštartujte aplikáciu.",
+					done_none: "Neboli nájdené žiadne aktualizácie.",
+					cancelled: "Aktualizácia pluginov zrušená.",
+					download: {
+						begin:    "Aktualizácia %{name}...",
+						progress: "Aktualizácia %{name}... %{current} / %{total} (%{percent}%%)",
+						end:      "Aktualizácia %{name}... hotovo",
+						error:    "Aktualizácia %{name}... chyba (%{message})"
+					}
+				}
+			}
+		},
+		download_config: {
+			title: "Nastavenie sťahovania",
+			label: {
+				best_quality:       "Vybrať najlepšiu možnú kvalitu",
+				preferred_quality:  "Preferovaná kvalita",
+				formats_priority:   "Priorita formátov médií",
+				audio_language:     "Jazyk audia",
+				subtitles_language: "Jazyk titulkov",
+				output_format:      "Výstupný formát"
+			},
+			button: {
+				ok:     "OK",
+				cancel: "Zavrieť",
+				add:    "Pridať",
+				remove: "Odobrať",
+				up:     "Hore",
+				down:   "Dole"
+			},
+			etc: {
+				no_quality:  "Žiadna kvalita",
+				no_language: "Žiadny jazyk",
+				window_select: {
+					title: "Vyberte hodnotu"
+				}
+			}
+		},
+		progress: {
+			title: "Spracovávanie",
+			buttons: {
+				cancel: "Zrušiť"
+			}
+		},
+		table: {
+			title: "Dáta",
+			tables: {
+				engines: {
+					title:       "Vybrať program",
+					placeholder: "Neboli nájdené žiadne programy",
+					columns: {
+						title: "Názov programu"
+					},
+					context_menu: {
+						copy_url:      "Skopírovať URL",
+						report_broken: "Nahlásiť nefunkčný program"
+					}
+				},
+				episodes: {
+					title:       "Vybrať epizódu",
+					placeholder: "Neboli nájdené žiadne epizódy",
+					columns: {
+						season: "Sezóna",
+						number: "Epizóda",
+						title:  "Názov"
+					},
+					context_menu: {
+						copy_url:      "Zkopírovat URL",
+						report_broken: "Nahlásit nefunkční epizodu"
+					}
+				},
+				media: {
+					title:       "Vybrať mediálny zdroj",
+					placeholder: "Neboli nájdené žiadne mediálne zdroje",
+					columns: {
+						title:         "Názov",
+						format:        "Formát",
+						video_quality: "Video kvalita",
+						audio_quality: "Audio kvalita",
+						language:      "Jazyk",
+						protected:     "Chránené",
+						video_format:  "Video formát",
+						audio_format:  "Audio formát"
+					},
+					context_menu: {
+						copy_url:        "Skopírovať URL",
+						copy_source_url: "Skopírovať zdrojovú URL",
+						media_info:      "Informácie o médiu",
+						report_broken:   "Nahlásiť nefunkčný mediálny zdroj"
+					}
+				}
+			},
+			progress: {
+				programs: "Načítanie programov...",
+				episodes: "Načítanie epizód...",
+				media:    "Načítanie mediálnych zdrojov..."
+			},
+			dialogs: {
+				save_file: "Vyberte cieľový súbor",
+				save_dir:  "Vyberte cieľový adresár"
+			},
+			buttons: {
+				select: "Vybrať",
+				goback: "Späť",
+				reload: "Obnoviť"
+			},
+			etc: {
+				prompt_text_search: "Hľadať"
+			},
+			errors: {
+				title:            "Chyba",
+				no_item_selected: "Vyberte položku"
+			}
+		},
+		media_getter: {
+			title: "Získať mediálny zdroj",
+			buttons: {
+				get: "Získať"
+			},
+			placeholder: {
+				urls: "Zadajte jednu, alebo viac URL, jedna na riadku"
+			},
+			progress: {
+				media: "Načítanie mediálnych zdrojov..."
+			},
+			errors: {
+				title:       "Chyba",
+				url_empty:   "Zadajte URL adresu",
+				url_invalid: "Neplatná URL adresa",
+				unsupported_urls: {
+					title: "Chyba - Nepodporované URL",
+					description: "Nasledujúce URL adresy nie sú podporované."
+				}
+			},
+			getter: {
+				automatic: "Automaticky"
+			}
+		},
+		configuration: {
+			title: "Nastavenia",
+			group: {
+				general:    "Všeobecné",
+				download:   "Sťahovanie",
+				conversion: "Konverzia",
+				naming:     "Pomenovanie",
+				plugins:    "Pluginy",
+				other:      "Ostatné"
+			},
+			fields: {
+				language:                   "Jazyk",
+				theme:                      "Vzhľad",
+				autoUpdateCheck:            "Automatická aktualizácia",
+				acceleratedDownload:        "Počet vlákien na jedno sťahovanie",
+				parallelDownloads:          "Maximálny počet súbežných sťahovaní",
+				parallelConversions:        "Maximálny počet súbežných konverzií",
+				computeStreamSize:          "Vypočítať veľkosť dátového prúdu",
+				requestConnectTimeout:      "Časový limit požiadavky pre pripojenie",
+				requestReadTimeout:         "Časový limit požiadavky na čítanie",
+				checkResourcesIntegrity:    "Kontrola integrity prostriedkov",
+				usePreReleaseVersions:      "Používať predbežné verzie",
+				autoEnableClipboardWatcher: "Automaticky aktivovať Sledovanie schránky",
+				conversionProvider:         "Poskytovateľ konverzií",
+				checkMessagesOnStartup:     "Kontrolovať správy pri spustení",
+				plugins: {
+					autoUpdateCheck: "Automatická aktualizácia pluginov"
+				},
+				naming: {
+					mediaTitleFormat:            "Formát názvov médií",
+					customMediaTitleFormat:      "Vlastný formát názvov médií",
+					customMediaTitleFormat_help: "Ako napísať vlastný formát názvov médií?"
+				},
+				report: {
+					email: "Predvolený email na nahlasovanie"
+				}
+			},
+			buttons: {
+				save:  "Uložiť",
+				close: "Zavrieť"
+			},
+			dialog: {
+				save_title:   "Nastavena",
+				save_success: "Nastavenie bolo uložené. Možno bude potrebné reštartovať aplikáciu.",
+				save_fail:    "Nie je možné uložiť nastavenia. Prosím, skúste to znova."
+			},
+			values: {
+				usePreReleaseVersions: {
+					ALWAYS:            "Vždy",
+					TILL_NEXT_RELEASE: "Do ďalšej hlavnej verzie",
+					NEVER:             "Nikdy",
+					UNKNOWN:           "Neznámá hodnota"
+				},
+				conversionProvider: {
+					ffmpeg: "FFmpeg"
+				}
+			}
+		},
+		message: {
+			title: "Zprávy a novinky",
+			buttons: {
+				show_in_browser: "Otvoriť v prehliadači",
+				mark_as_read:    "Označiť ako prečítané"
+			}
+		},
+		media_info: {
+			title:    "Informáce o médiu",
+			no_items: "Žiadne informácie",
+			column: {
+				title: "Názov",
+				value: "Hodnota"
+			},
+			context_menu: {
+				copy_data_text:            "Skopírovať dáta ako text",
+				copy_data_text_only_name:  "Skopírovať názov",
+				copy_data_text_only_value: "Skopírovať hodnotu"
+			}
+		},
+		preview: {
+			title: "Náhľad"
+		},
+		clipboard_watcher: {
+			title: "Sledovanie schránky",
+			label: {
+				status: "Stav: %{status}"
+			},
+			status: {
+				enabled:  "Aktívne",
+				disabled: "Neaktívne"
+			},
+			button: {
+				set_state_enable:  "Aktivovať",
+				set_state_disable: "Deaktivovať",
+				get:               "Získať"
+			},
+			progress: {
+				media: "Načítanie mediálnych zdrojov..."
+			},
+			placeholder: {
+				urls: "Tu budú vkladané URL"
+			},
+			error: {
+				title:       "Chyba",
+				url_empty:   "Zadajte URL adresu",
+				url_invalid: "Neplatná URL adresa"
+			}
+		},
+		about: {
+			title: "O programe",
+			label: {
+				version:     "%{version}s (%{release_date}s)",
+				author:      "%{name}s <%{email}s>",
+				description: "Jednoduchý program na sťahovanie seriálov, filmov a médií z rôznych "
+				           + "webových stránok a serverov."
+			}
+		},
+		report: {
+			title: "Nahlásenie",
+			text: {
+				optional: " (voliteľné)"
+			},
+			label: {
+				reason: "Dôvod",
+				email: "Email",
+				note: "Poznámka",
+				raw_data: "Dáta na odoslanie",
+				anonymize_data: "Anonymizovať dáta (Kontaktné údaje budú aj naďalej zaslané)"
+			},
+			button: {
+				send: "Odoslať"
+			},
+			value: {
+				reason: {
+					ERROR:       "Chyba",
+					BROKEN:      "Nefunkčné",
+					IMPROVEMENT: "Vylepšenie",
+					ISSUE:       "Problém",
+					FEEDBACK:    "Spätná väzba",
+					OTHER:       "Ostatné"
+				}
+			},
+			message: {
+				note_required: {
+					title: "Validácia",
+					text:  "Poznámka je povinná!"
+				}
+			}
+		},
+		credentials: {
+			title: "Prihlasovacie údaje",
+			table: {
+				placeholder: "Nie sú dostupné žiadne prihlasovacie údaje",
+				column: {
+					title: "Názov"
+				}
+			},
+			button: {
+				edit: "Upraviť"
+			}
+		},
+		dialogs: {
+			credentials_edit: {
+				title: "Prihlasovacie údaje - %{title}",
+				button: {
+					save:   "Uložiť",
+					cancel: "Zrušiť"
+				}
+			}
+		}
+	},
+	dialogs: {
+		update_available: {
+			title: "Aktualizácia k dispozícii",
+			text:  "Nová verzia je k dispozícii! Chcete program aktualizovať?"
+		},
+		pre_release_versions: {
+			application_updated: {
+				title: "Predbežné verzie",
+				text:  "Program bol aktualizovaný na novšiu hlavnú verziu. "
+				     + "Chcete aj naďalej používať predbežné verzie?"
+			},
+			configuration_changed: {
+				title: "Predbežné verzie",
+				text:  "Nastavenie bolo zmenené tak, aby sa nepoužívali predbežné verzie. "
+				     + "Chcete sa vrátiť späť k hlavnej verzii?"
+			}
+		},
+		report: {
+			success: {
+				title: "Nahlásenie",
+				text:  "Hlásenie bolo úspešne odoslané."
+			},
+			error: {
+				title: "Nahlásenie",
+				text:  "Pri odosielaní hlásenia došlo k chybe. Skúste to prosím znova."
+			}
+		}
+	},
+	errors: {
+		io: {
+			generic: "Nastala chyba I/O"
+		},
+		download: {
+			invalid_arguments: "Neplatná URL adresa alebo cesta súboru",
+			cannot_download:   "Nie je možné stiahnuť súbor: %{url}"
+		},
+		conversion: {
+			cannot_convert: "Nie je možné skonvertovať súbor: %{path}"
+		},
+		credentials: {
+			missing:   "Chýbajúce prihlasovacie údaje. Zadajte prosím svoje prihlasovacie údaje "
+					 + "v okne Prihlasovacie údaje.",
+			incorrect: "Možno nesprávne prihlasovacie údaje. Skontrolujte prosím svoje prihlasovacie údaje "
+					 + "v okne Prihlasovacie údaje."
+		}
+	},
+	generic: {
+		unknown: "Neznáme",
+		true:    "Áno",
+		false:   "Nie",
+		preview: "Náhľad",
+		ok:      "OK",
+		language: {
+			auto: "Automaticky"
+		}
+	},
+	media: {
+		protected: {
+			true:  "Áno",
+			false: "Nie"
+		},
+		language: {
+			UNKNOWN:      "Neznámy",
+			UNDETERMINED: "Neurčené",
+			MULTIPLE:     "Viacjazyčný",
+			ENGLISH:      "Angličtina",
+			CZECH:        "Čeština",
+			SLOVAK:       "Slovenština"
+		},
+		format: {
+			UNKNOWN: "Neznámý"
+		},
+		quality: {
+			UNKNOWN:      "Neznáma",
+			P144:         "144p",
+			P240:         "240p",
+			P360:         "360p",
+			P380:         "380p",
+			P480:         "480p",
+			P720:         "720p",
+			P1080:        "1080p",
+			P2160:        "2160p",
+			VIDEO_MIN:    "Minimálna",
+			VIDEO_LOW:    "Nízka",
+			VIDEO_MEDIUM: "Stredná",
+			VIDEO_HIGH:   "Vysoká",
+			AUDIO_MIN:    "Minimálna",
+			AUDIO_LOW:    "Nízka",
+			AUDIO_MEDIUM: "Stredná",
+			AUDIO_HIGH:   "Vysoká"
+		},
+		naming: {
+			word_season:  "sezóna",
+			word_episode: "diel"
+		}
+	},
+	credentials: {
+		type: {
+			username_credentials: {
+				label: {
+					username: "Používateľské meno",
+					password: "Heslo"
+				}
+			},
+			email_credentials: {
+				label: {
+					email:    "Email",
+					password: "Heslo"
+				}
+			}
+		}
+	}
+}
